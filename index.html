@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Portafolio | Juan Valencia</title>
+<link rel="stylesheet" href="styles.css">
+
+<!-- partículas -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <h1 class="logo">JV</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#video">Video</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="hero reveal">
+    <img src="ASSET/imagenes/img_perfil.jpg" class="foto">
+    <h2>Juan Valencia</h2>
+    <p>Desarrollador de Software</p>
+</section>
+
+<!-- SOBRE MI -->
+<section id="sobre-mi" class="reveal">
+<h2 class="titulo">Sobre mí</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3> Estudios</h3>
+<p>Análisis y Desarrollo de Software</p>
+</div>
+
+<div class="card">
+<h3> Intereses</h3>
+<p>Aprender tecnología, programar y crecer profesionalmente</p>
+</div>
+
+<div class="card">
+<h3> Entretenimiento</h3>
+<p>Películas, lectura y aprendizaje constante</p>
+</div>
+
+<div class="card">
+<h3> Sueños</h3>
+<p>Ser desarrollador profesional y crear software innovador</p>
+</div>
+
+</div>
+</section>
+
+<!-- HABILIDADES -->
+<section id="habilidades" class="reveal">
+<h2 class="titulo">Habilidades</h2>
+
+<div class="skills">
+
+<div class="skill">
+<span>Python</span>
+<div class="barra"><div style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<span>HTML</span>
+<div class="barra"><div style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<span>CSS</span>
+<div class="barra"><div style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<span>Git</span>
+<div class="barra"><div style="width:70%"></div></div>
+</div>
+
+</div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="reveal">
+<h2 class="titulo">Proyectos</h2>
+
+<div class="cards">
+<div class="card">Sistema de tienda en Python</div>
+<div class="card">Portafolio Web</div>
+<div class="card">Proyecto Scratch</div>
+</div>
+</section>
+
+<!-- VIDEO -->
+<section id="video" class="reveal">
+<h2 class="titulo">Video presentación</h2>
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/fXBG8ZAaBKI" allowfullscreen></iframe>
+</div>
+</section>
+
+<!-- CONTACTO CON FORMULARIO -->
+<section id="contacto" class="reveal">
+<h2 class="titulo">Contacto</h2>
+
+<form class="formulario">
+<input type="text" placeholder="Nombre" required>
+<input type="email" placeholder="Correo" required>
+<textarea placeholder="Mensaje" required></textarea>
+<button>Enviar mensaje</button>
+</form>
+
+<div class="redes">
+<a href="#">GitHub</a>
+<a href="#">Instagram</a>
+<a href="#">LinkedIn</a>
+</div>
+
+</section>
+
+<footer class="footer">
+<p>© 2026 Juan Valencia</p>
+</footer>
+
+<!-- partículas -->
+<script>
+particlesJS("particles-js", {
+particles:{
+number:{value:80},
+size:{value:3},
+move:{speed:1.5},
+line_linked:{enable:true},
+color:{value:"#55fcf3"}
+}
+});
+</script>
+
+<!-- scroll reveal -->
+<script>
+const reveal = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll",()=>{
+reveal.forEach(el=>{
+const top = el.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+el.classList.add("active");
+}
+});
+});
+</script>
+
+</body>
+</html>
