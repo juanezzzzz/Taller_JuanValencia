@@ -72,6 +72,13 @@ font-size:35px;
 }
 
 /* CARDS */
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
 /* TARJETAS MEJORADAS */
 .card{
 background:white;
@@ -140,7 +147,6 @@ transform:translateX(-100%) rotate(25deg);
 transform:translateX(100%) rotate(25deg);
 }
 }
-
 
 /* SKILLS */
 .skill{
