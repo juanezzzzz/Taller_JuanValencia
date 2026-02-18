@@ -72,27 +72,75 @@ font-size:35px;
 }
 
 /* CARDS */
-.cards{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-}
-
+/* TARJETAS MEJORADAS */
 .card{
 background:white;
 color:black;
 padding:25px;
 border-radius:15px;
-width:250px;
+width:260px;
 text-align:center;
-transition:0.3s;
+transition:all 0.4s ease;
+position:relative;
+overflow:hidden;
+cursor:pointer;
 }
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,0,0,0.3);
+/* TEXTO INTERNO */
+.card h3{
+margin-bottom:12px;
+color:#0a2540;
+font-size:18px;
 }
+
+.card p{
+font-size:14px;
+line-height:1.5;
+color:#333;
+}
+
+/* EFECTO GLOW */
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:
+0 0 10px #55fcf3,
+0 0 25px #55fcf3,
+0 0 50px #55fcf3;
+}
+
+/* EFECTO LUZ ANIMADA */
+.card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(85,252,243,0.7),
+transparent
+);
+transform:rotate(25deg);
+opacity:0;
+transition:0.5s;
+}
+
+.card:hover::before{
+opacity:0.4;
+animation:shine 1.5s linear infinite;
+}
+
+@keyframes shine{
+0%{
+transform:translateX(-100%) rotate(25deg);
+}
+100%{
+transform:translateX(100%) rotate(25deg);
+}
+}
+
 
 /* SKILLS */
 .skill{
